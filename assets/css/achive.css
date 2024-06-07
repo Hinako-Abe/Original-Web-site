@@ -1,0 +1,185 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+/* ヘッダー ----------------------------------------------------*/
+header{
+    background-color: #a2d2f4;
+    width: 100vw;
+    height: 70px;
+    display: flex;
+    justify-content: space-between;
+}
+@media screen and (max-width: 480px){ 
+.name{
+    font-size: 10px;
+}
+}
+
+.name{
+    font-size: 30px;
+    font-weight: bold;
+    border: #242424 solid 5px;
+    padding: 3px;
+    margin: 1px;
+}
+
+/* main ---------------------------------------------------------------*/
+.photo1 img, .photo2 img, .photo3 img, .photo4 img, .photo5 img, .photo6 img, .photo7 img, .photo8 img, .photo9 img{
+    width: 600px;
+    height: 200px;
+    margin:0 auto 5%;
+    border-radius: 40% 80% 35% 65% / 50% 50% 70% 40%;
+    background: #6cdeff;
+}
+@media screen and (max-width: 480px){ 
+photo1 img,
+photo2 img
+photo3 img
+photo4 img
+photo5 img
+photo6 img
+photo7 img
+photo8 img
+{
+    width: 200px;
+    height: 50px;
+    }
+    }
+
+.title1, .title2, .title3, .title4, .title5, .title6, .title7, .title8, .title9{
+    font-size: 40px;
+    font-weight: bold;
+    white-space: nowrap;
+    position: absolute;
+    text-shadow: 4px 4px 4px white;
+
+}
+.content1, .content2, .content3, .content4, .content5, .content6, .content7, .content8, .content9{
+    font-size: 25px;
+    line-break: normal;
+    padding: 50px;
+    margin: 10px;
+}
+.things1, .things2, .things3, .things4, .things5, .things6, .things7, .things8, .things9{
+    display: flex;
+    position: relative;
+} 
+.thing1, .thing2, .thing3, .thing4, .thing5, .thing6, .thing7, .thing8, .thing9{
+    display: flex;
+    flex-direction: row;
+    margin: 80px;
+    justify-content: space-around;
+}
+
+/* ハンバーガーメニュー ---------------------------------------------*/
+#humMenu {
+    background: none;
+    padding: 3px;
+    margin: 3px;
+}
+
+#humCheck, #humClose { display:none; }
+#humOpen {
+    display: block;
+    width: 58px;
+    cursor: pointer;
+}
+#humOpen:hover {
+    opacity: 0.5;
+}
+#humOpen img { display: block; }
+#humClose, nav {
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100%;
+}
+#humClose {
+    z-index: 2;
+    width: 100%;
+    background: gray;
+    opacity: 0.8;
+    transition: 0.5s;
+}
+.hamContents {
+    z-index: 3;
+    width: 330px;
+    background: white;
+    transition: 0.5s;
+    transform: translateX(-100%);
+}
+#humCheck:checked ~ #humClose { display: block; }
+#humCheck:checked ~ .hamContents {
+    transform: translateX(0);
+}
+.inner{
+overflow: hidden;
+list-style: none;
+margin-top: 300px;
+}
+.hamAbout{
+    padding: 15px 0;
+    margin: 10px 0;
+    border: black solid 1px;
+}
+.hamAbout:hover{
+    opacity: 0.5;
+}
+.hamAbout {
+    font-size: 20px;
+    text-decoration: none;
+    color: black;
+}
+
+/* footer ------------------------------------------------------*/
+footer{
+    background-color: #a2d2f4;
+    width: 100vw;
+    height: 200px;;
+}
+
+.footer-contents-01{
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    height: 200px;
+    border: #2f79e8 solid 1px;
+}
+
+
+
+#footer-content-01 > p{
+    font-size: 30px;
+    font-weight: bold;
+    border: #242424 solid 3px;
+    margin-top: 10px;
+    width: 210px;
+}
+#footer-content-02{
+    font-size: 10px;
+    display: flex;
+    justify-content: space-around;
+}
+
+
+#footer-content-04{
+    text-align: center;
+    background-color: #a2d2f4;
+}
+
+.footer-contents-02{
+    border:yellow solid 1px;
+    height: 200px;
+    width: 100%;
+} 
+
+.addrescompa, .tellcompa{
+    font-size: 20px;
+    margin: 40px;
+}
+.infoContent{
+    display: flex;
+    flex-direction: row;
+}

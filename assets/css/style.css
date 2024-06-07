@@ -1,0 +1,413 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+/* ヘッダー -----------------------------------------------------------------------------------------------------------------------------*/
+header{
+  background-color: #a2d2f4;
+  width: 100vw;
+  height: 70px;
+  display: flex;
+  justify-content: space-between;
+  
+
+}
+.name{
+  font-size: 30px;
+  font-weight: bold;
+  border: #242424 solid 5px;
+  padding: 3px;
+  margin: 3px;
+}
+
+
+/* ハンバーガーメニュー-------------------------------------------------------------------------------------------------------------------- */
+#humMenu {
+  background: none;
+  padding: 3px;
+  margin: 3px;
+  /* display: flex;
+  justify-content: flex-end; */
+}
+
+#humCheck, #humClose { display:none; }
+#humOpen {
+  display: block;
+  width: 58px;
+  cursor: pointer;
+}
+#humOpen:hover {
+  opacity: 0.5;
+}
+#humOpen img { display: block; }
+#humClose, nav {
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100%;
+}
+#humClose {
+  z-index: 2;
+  width: 100%;
+  background: gray;
+  opacity: 0.8;
+  transition: 0.5s;
+}
+.hamContents {
+  z-index: 3;
+  width: 330px;
+  background: white;
+  transition: 0.5s;
+  transform: translateX(-100%);
+}
+#humCheck:checked ~ #humClose { display: block; }
+#humCheck:checked ~ .hamContents {
+  transform: translateX(0);
+}
+.inner{
+overflow: hidden;
+list-style: none;
+margin-top: 300px;
+}
+.hamAbout{
+  padding: 15px 0;
+  margin: 10px 0;
+  border: black solid 1px;
+}
+.hamAbout:hover{
+  opacity: 0.5;
+}
+.hamAbout {
+  font-size: 20px;
+  text-decoration: none;
+  color: black;
+}
+
+/* ---------------------------------------------------------------------------------------------------------------------------------------- */
+/* スライドショー１ */
+.slider {
+  position:relative;
+	z-index: 1;
+	/*↑z-indexの値をh1のz-indexの値よりも小さくして背景に回す*/
+	height: 100vh;/*スライダー全体の縦幅を画面の高さいっぱい（100vh）にする*/
+  margin-top: 50px;
+}
+
+.slider-item {
+    width: 100%;/*各スライダー全体の横幅を画面の高さいっぱい（100%）にする*/
+    height:100vh;/*各スライダー全体の縦幅を画面の高さいっぱい（100vh）にする*/
+    background-repeat: no-repeat;/*背景画像をリピートしない*/
+    background-position: center;/*背景画像の位置を中央に*/
+    background-size: cover;/*背景画像が.slider-item全体を覆い表示*/
+}
+
+/*矢印の設定*/
+
+.slick-prev, 
+.slick-next {
+    position: absolute;
+	z-index: 3;
+    top: 42%;
+    cursor: pointer;/*マウスカーソルを指マークに*/
+    outline: none;/*クリックをしたら出てくる枠線を消す*/
+    border-top: 2px solid #fff;/*矢印の色*/
+    border-right: 2px solid #fff;/*矢印の色*/
+    height: 25px;
+    width: 25px;
+}
+
+.slick-prev {/*戻る矢印の位置と形状*/
+    left:2.5%;
+    transform: rotate(-135deg);
+}
+
+.slick-next {/*次へ矢印の位置と形状*/
+    right:2.5%;
+    transform: rotate(45deg);
+}
+
+/*ドットナビゲーションの設定*/
+
+.slick-dots {
+	position: relative;
+	z-index: 3;
+    text-align:center;
+	margin:-50px 0 0 0;/*ドットの位置*/
+}
+
+.slick-dots li {
+    display:inline-block;
+	margin:0 5px;
+}
+
+.slick-dots button {
+    color: transparent;
+    outline: none;
+    width:8px;/*ドットボタンのサイズ*/
+    height:8px;/*ドットボタンのサイズ*/
+    display:block;
+    border-radius:50%;
+    background:#fff;/*ドットボタンの色*/
+}
+
+.slick-dots .slick-active button{
+    background:#333;/*ドットボタンの現在地表示の色*/
+}
+
+
+.section1{
+  width: 80%;
+  margin: auto;
+  display: block;
+}
+.slider1, .slider2, .slider3{
+  position: relative;
+}
+.letter1, .letter2, .letter3{
+  font-size: 90px;
+  font-weight: bold;
+  text-shadow: 3px 3px 1px white;
+  position: absolute;
+  top:50%;
+  left:50%;
+  transform: translate(-50%,-50%);
+  padding:0;
+  margin:0;
+  white-space: nowrap;
+}
+
+
+/* 契約の流れ ---------------------------------------------------------------------------------------------------------------------〇----------*/
+.logos1, .logos5{
+  width: 250px;
+  height: 250px;
+  margin-top: 30px;
+}
+.logos3-1{
+  width: 210px;
+  height: 210px;
+  margin-top: -20px;
+}
+.logos3-2{
+  width: 250px;
+  height: 250px;
+  margin-top: 85px;
+}
+.title1, .title5, .title3-1, .title3-2{
+  font-size: 30px;
+  color: #2f79e8;
+  margin-top: 60px;
+}
+.content1, .content5, .content3-1, .content3-2, .content3{
+  font-size: 20px;
+}
+.top2, .down2{
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  margin-left: 20px;
+}
+.top1, .down1{
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+.right2, .left2{
+  flex-direction: column;
+}
+.left2{
+  margin-left: -30px;
+}
+.left1{
+  display: flex;
+  justify-content: flex-start;
+  margin-top: -90px;
+  
+}
+.right1{
+  display: flex;
+  text-align: right;
+  margin-top: -90px;
+}
+.part3{
+  display: flex;
+  justify-content: space-between;
+}
+/* -------------------------------------------------------------------------------------------------------------------------------------〇----- */
+
+/* 矢印の調節 --------------------------------------------------------------------------------------------------------------------------〇---- */
+.arrow-01{
+  width: 200px;
+  height: 200px;
+  transform: rotate(-45deg)
+}
+.arrow-02{
+  width: 200px;
+  height: 200px;
+  transform: rotate(45deg);
+}
+.arrow-03{
+  width: 200px;
+  height: 200px;
+  transform: rotate(225deg);
+}
+.arrow-04{
+  width: 200px;
+  height: 200px;
+  transform: rotate(135deg);
+}
+.arrows1, .arrows2{
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.arrows, .arrows2{
+  margin-top: -150px;
+}
+/* ------------------------------------------------------------------------------------------------------------------------------------〇------- */
+
+
+/* /*セクション３*---------------------------------------------------------------------------------------------------------------------- */
+.insurance1, .insurance2, .insurance3{
+  font-size: 50px;
+  border: #242424;
+  font-weight: 100;
+  color: black;
+}
+
+.explain1 img,.explain2 img, .explain3 img, .explain4 img, .explain5 img, .explain6 img, .explain7 img, .explain8 img, .explain9 img{
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.pic1, .pic2, .pic3, .pic4, .pic5, .pic6, .pic7, .pic8, .pic9{
+  position: relative;
+  display: block;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  width: 30%;
+}
+
+.explain1, .explain2, .explain3, .explain4, .explain5, .explain6, .explain7, .explain8, .explain9 {
+  display: block;
+}
+
+.link1, .link2, .link3, .link4, .link5, .link6, .link7, .link8, .link9{
+  position: absolute;
+  top: 100px;
+  left: 100px;
+  text-shadow: 4px 4px 4px white;
+  font-weight: bold;
+  color: #242424;
+  text-decoration-line: none;
+  white-space: nowrap;
+}
+
+.explanation1, .explanation2, .explanation3{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 10px;
+  margin: 100px 0 0 350px;
+  box-sizing: border-box;
+}
+
+
+.link1,
+.link2,
+.link3,
+.link4,
+.link5,
+.link6,
+.link7,
+.link8,
+.link9 {
+  display: inline-block;
+  color: #242424;
+  text-decoration:none;
+  transition: .3s;
+  -webkit-transform: scale(1);
+  transform: scale(1);
+}
+.link1 a:hover,
+.link2 a:hover,
+.link3 a:hover,
+.link4 a:hover,
+.link5 a:hover,
+.link6 a:hover,
+.link7 a:hover,
+.link8 a:hover,
+.link9 a:hover
+{
+  font-size: 120%;
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+}
+
+.link1 > a,
+.link2 > a,
+.link3 > a,
+.link4 > a,
+.link5 > a,
+.link6 > a,
+.link7 > a,
+.link8 > a,
+.link9 > a
+{
+  color: black;
+  text-decoration-line: none;
+}
+
+/* footerーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー */
+
+footer{
+  background-color: #a2d2f4;
+  width: 100vw;
+  height: 200px;
+}
+.footer-contents-01{
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+  height: 200px;
+  border: #2f79e8 solid 1px;
+}
+
+
+
+
+#footer-content-01 > p{
+  font-size: 30px;
+  font-weight: bold;
+  border: #242424 solid 3px;
+  margin-top: 10px;
+  width: 210px;
+}
+#footer-content-02{
+  font-size: 10px;
+  display: flex;
+  justify-content: space-around;
+}
+
+
+#footer-content-04{
+  text-align: center;
+  background-color: #a2d2f4;
+}
+
+.footer-contents-02{
+  border:yellow solid 1px;
+  height: 200px;
+  width: 100%;
+} 
+
+.addrescompa, .tellcompa{
+  font-size: 20px;
+  margin: 40px;
+}
+.infoContent{
+  display: flex;
+  flex-direction: row;
+}
